@@ -448,7 +448,7 @@ def assign(left, right):
     return torch.nn.Parameter(torch.tensor(right))
 
 
-def load_weigths_into_gpt(gpt, params):
+def load_weights_into_gpt(gpt, params):
     gpt.pos_emb.weight = assign(gpt.pos_emb.weight, params['wpe'])
     gpt.tok_emb.weight = assign(gpt.tok_emb.weight, params['wte'])
 
